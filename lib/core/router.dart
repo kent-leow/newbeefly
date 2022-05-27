@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:newbeefly/constant/view_args.dart';
 import 'package:newbeefly/core/helpers/helpers.dart';
+import 'package:newbeefly/ui/layouts/main_layout_logic.dart';
 import 'package:newbeefly/ui/views/common/error_view.dart';
 import 'package:newbeefly/ui/views/common/not_found_view.dart';
 import 'package:newbeefly/ui/views/home/home_logic.dart';

@@ -13,11 +13,11 @@ class HomeView extends GetResponsiveView<HomeLogic> {
   @override
   Widget builder() {
     final MainLayoutLogic mainLayoutLogic = Get.find<MainLayoutLogic>();
-
     return MainLayout(
       child: Flexible(
         child: Center(
           child: ListView(
+            controller: ScrollController(),
             children: [
               Column(
                 children: [

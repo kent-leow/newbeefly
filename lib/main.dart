@@ -47,7 +47,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      enableLog: false,
       initialRoute: RouteConfig.homeView,
       unknownRoute: RouteConfig.notFoundPage,
       getPages: RouteConfig.getPages,

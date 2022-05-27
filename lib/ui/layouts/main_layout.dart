@@ -103,9 +103,9 @@ class MainLayout extends GetResponsiveView<MainLayoutLogic> {
     return Drawer(
       child: ListView(
         children: [
-          // Obx(() {
-          //   return Text('${logic.test}');
-          // }),
+          Obx(() {
+            return Text('${controller.test}');
+          }),
           Padding(
             padding: EdgeInsets.all(Helpers.getPadding(pad: 10)),
             child: Image.asset('assets/images/palo-it.png'),
@@ -114,7 +114,8 @@ class MainLayout extends GetResponsiveView<MainLayoutLogic> {
             ListTile(
               title: Text('${Constants.moduleNames[module]!.name}'),
               onTap: () {
-                Get.offAllNamed(Constants.moduleNames[module]!.path);
+                Get.offNamedUntil(Constants.moduleNames[module]!.path, (route) => route.isFirst);
+                //Get.toNamed(Constants.moduleNames[module]!.path);
                 // logic.moduleId.value = Constants.moduleNames[module]!.id;
               },
             ),
