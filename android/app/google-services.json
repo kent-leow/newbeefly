@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1065743042513",
+    "project_id": "newbeefly-d324b",
+    "storage_bucket": "newbeefly-d324b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065743042513:android:25ec66783dd51aa7f442f0",
+        "android_client_info": {
+          "package_name": "com.example.newbeefly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065743042513-80o6q2a1hdtfn9hgetn629et503jtqvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKN8DY3m5dwRXWIArYzuPue6Aaw_2cnvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065743042513-80o6q2a1hdtfn9hgetn629et503jtqvf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1065743042513-r19btgn41o0mrepu86u9a967ur54rju6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newbeefly"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

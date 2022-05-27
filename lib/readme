@@ -1,0 +1,1 @@
+"flutter pub run build_runner build" - To generate the .g.dart file for json annotation package.
