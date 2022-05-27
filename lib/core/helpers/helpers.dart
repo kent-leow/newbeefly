@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class Helpers {
   Helpers._();
 
-  static Function getPadding =
+  static double Function({int pad}) getPadding =
       ({int pad = 1}) => pad * Constants.defaultPadding;
 
   static Case customSwitch<CaseType, Case>(
