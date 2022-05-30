@@ -10,6 +10,7 @@ import 'package:newbeefly/constant/themes.dart';
 import 'package:newbeefly/core/services/translation_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:newbeefly/ui/layouts/main_layout_logic.dart';
+import 'package:newbeefly/ui/layouts/main_layout_nested_logic.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: RouteConfig.homeView,
+      initialRoute: RouteConfig.getDefaultView(),
       unknownRoute: RouteConfig.notFoundPage,
       getPages: RouteConfig.getPages,
       defaultTransition: RouteConfig.defaultTransition,

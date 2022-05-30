@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Kent Leow",
+    "age": 27,
+    "origin": "Malaysian",
+    "gender": "Male"
+  },
+  {
+    "name": "Chris Wu",
+    "age": 33,
+    "origin": "China",
+    "gender": "Male"
+  },
+  {
+    "name": "Mandy Lee",
+    "age": 25,
+    "origin": "Singapore",
+    "gender": "Female"
+  }
+]
