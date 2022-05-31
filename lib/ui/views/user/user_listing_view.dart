@@ -7,13 +7,15 @@ import 'user_listing_logic.dart';
 class UserListingView extends StatelessWidget {
   final logic = Get.put(UserListingLogic());
 
+  UserListingView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: logic.getData(),
       builder: (context, AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Text("LOADING");
+          return const Text("LOADING");
         }
         return snapshot.hasData
             ? ListView.builder(
@@ -27,7 +29,7 @@ class UserListingView extends StatelessWidget {
                 },
                 itemCount: snapshot.data!.length,
               )
-            : Text('nothing');
+            : const Text('nothing');
       },
     );
   }

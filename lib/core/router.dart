@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:newbeefly/constant/view_args.dart';
-import 'package:newbeefly/core/helpers/helpers.dart';
-import 'package:newbeefly/ui/layouts/main_layout_logic.dart';
+import 'package:newbeefly/shared/helpers/helpers.dart';
 import 'package:newbeefly/ui/layouts/main_layout_nested.dart';
 import 'package:newbeefly/ui/views/common/error_view.dart';
 import 'package:newbeefly/ui/views/common/not_found_view.dart';
 import 'package:newbeefly/ui/views/home/home_logic.dart';
 import 'package:newbeefly/ui/views/home/home_view.dart';
-import 'package:newbeefly/ui/views/profile/profile_view.dart';
 import 'package:newbeefly/ui/views/home/second_logic.dart';
 import 'package:newbeefly/ui/views/home/second_view.dart';
+import 'package:newbeefly/ui/views/profile/profile_view.dart';
 import 'package:newbeefly/ui/views/user/user_detail_view.dart';
 import 'package:newbeefly/ui/views/user/user_listing_view.dart';
+
+import '../ui/layouts/main_layout_logic.dart';
 
 class RouteConfig {
   static const Transition defaultTransition = Transition.noTransition;
@@ -28,10 +28,15 @@ class RouteConfig {
   static const String userDetailView = '/user-detail';
 
   static String getDefaultView() => homeView;
+  static Bindings getInitialBindings() => BindingsBuilder(
+        () {
+      Get.lazyPut(() => MainLayoutLogic());
+    },
+  );
 
   static final GetPage notFoundPage = GetPage(
     name: notFoundView,
-    page: () => NotFoundView(),
+    page: () => const NotFoundView(),
   );
 
   static final List<GetPage> getPages = [
@@ -58,7 +63,7 @@ class RouteConfig {
     ),
     // GetPage(name: secondView, page: () => SecondView()),
     GetPage(name: profileView, page: () => ProfileView()),
-    GetPage(name: errorView, page: () => ErrorView()),
+    GetPage(name: errorView, page: () => const ErrorView()),
     GetPage(name: mainLayoutNested, page: () => MainLayoutNested()),
   ];
 

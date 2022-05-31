@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:newbeefly/constant/constants.dart';
+import 'package:newbeefly/shared/constant/constants.dart';
 
 class TranslationService extends Translations {
   static final TranslationService _singleton = TranslationService._internal();

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class NotFoundView extends StatelessWidget{
+  const NotFoundView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Text('Im ERROR');
+    return const Text('Im ERROR');
   }
 
 

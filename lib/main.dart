@@ -1,16 +1,14 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:newbeefly/constant/constants.dart';
-import 'package:newbeefly/constant/view_args.dart';
 import 'package:newbeefly/core/router.dart';
-import 'package:newbeefly/constant/themes.dart';
 import 'package:newbeefly/core/services/translation_service.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:newbeefly/ui/layouts/main_layout_logic.dart';
-import 'package:newbeefly/ui/layouts/main_layout_nested_logic.dart';
+import 'package:newbeefly/shared/constant/constants.dart';
+import 'package:newbeefly/shared/constant/themes.dart';
+
 import 'firebase_options.dart';
 
 void main() async {
@@ -53,11 +51,7 @@ class MyApp extends StatelessWidget {
       getPages: RouteConfig.getPages,
       defaultTransition: RouteConfig.defaultTransition,
       transitionDuration: RouteConfig.defaultTransitionDuration,
-      initialBinding: BindingsBuilder(
-        () {
-          Get.lazyPut(() => MainLayoutLogic());
-        },
-      ),
+      initialBinding: RouteConfig.getInitialBindings(),
       title: 'NewbeeFly',
       theme: Themes.light,
       darkTheme: Themes.dark,

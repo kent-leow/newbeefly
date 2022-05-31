@@ -1,6 +1,4 @@
-import 'package:get/get.dart';
-import 'package:newbeefly/constant/constants.dart';
-import 'package:flutter/material.dart';
+import 'package:newbeefly/shared/constant/constants.dart';
 
 class Helpers {
   Helpers._();

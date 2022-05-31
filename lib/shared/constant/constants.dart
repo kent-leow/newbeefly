@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newbeefly/constant/classes.dart';
-import 'package:newbeefly/constant/enums.dart';
 import 'package:newbeefly/core/router.dart';
+import 'package:newbeefly/shared/constant/classes.dart';
+import 'package:newbeefly/shared/constant/enums.dart';
 import 'package:newbeefly/ui/views/home/home_view.dart';
 import 'package:newbeefly/ui/views/profile/profile_view.dart';
 

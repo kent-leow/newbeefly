@@ -11,12 +11,12 @@ class Themes {
   static ThemeData light = base.copyWith(
     brightness: Brightness.light,
     primaryColor: Colors.amber,
-    appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+    appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
   );
 
   static ThemeData dark = base.copyWith(
     brightness: Brightness.dark,
     primaryColor: Colors.deepPurple,
-    appBarTheme: AppBarTheme(backgroundColor: Colors.deepPurple),
+    appBarTheme: const AppBarTheme(backgroundColor: Colors.deepPurple),
   );
 }
